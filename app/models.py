@@ -1,19 +1,19 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from enum import Enum
 from typing import Optional
 
 class UserRole(str, Enum):
-    FACULTY = "faculty"
+    PROFESSOR = "professor"
     STUDENT = "student"
 
 class LDAPUser(BaseModel):
-    uid: str
+    ldapid: str
     password: str
     cn: str  # Common Name (Full Name)
-    mail: str
-    employee_type: UserRole
-    department: Optional[str] = None
-    title: Optional[str] = None
+    email: str
+    role: UserRole
+    department: str
+    insti_id: str = Field(..., min_length=8, max_length=8)  # 8 digit number
 
 class AuthRequest(BaseModel):
     username: str

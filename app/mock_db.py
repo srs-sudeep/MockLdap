@@ -3,42 +3,44 @@ from passlib.hash import bcrypt
 
 # Mock LDAP database
 mock_users = {
-    # Faculty members
+    # Professors
     "john.doe": LDAPUser(
-        uid="john.doe",
+        ldapid="john.doe",
         password=bcrypt.hash("faculty123"),
         cn="John Doe",
-        mail="john.doe@university.edu",
-        employee_type=UserRole.FACULTY,
+        email="john.doe@university.edu",
+        role=UserRole.PROFESSOR,
         department="Computer Science",
-        title="Professor"
+        insti_id="20230001"
     ),
     "jane.smith": LDAPUser(
-        uid="jane.smith",
+        ldapid="jane.smith",
         password=bcrypt.hash("faculty456"),
         cn="Jane Smith",
-        mail="jane.smith@university.edu",
-        employee_type=UserRole.FACULTY,
+        email="jane.smith@university.edu",
+        role=UserRole.PROFESSOR,
         department="Mathematics",
-        title="Associate Professor"
+        insti_id="20230002"
     ),
     
     # Students
     "alice.student": LDAPUser(
-        uid="alice.student",
+        ldapid="alice.student",
         password=bcrypt.hash("student123"),
         cn="Alice Johnson",
-        mail="alice.j@university.edu",
-        employee_type=UserRole.STUDENT,
-        department="Computer Science"
+        email="alice.j@university.edu",
+        role=UserRole.STUDENT,
+        department="Computer Science",
+        insti_id="20230003"
     ),
     "bob.student": LDAPUser(
-        uid="bob.student",
+        ldapid="bob.student",
         password=bcrypt.hash("student456"),
         cn="Bob Wilson",
-        mail="bob.w@university.edu",
-        employee_type=UserRole.STUDENT,
-        department="Mathematics"
+        email="bob.w@university.edu",
+        role=UserRole.STUDENT,
+        department="Mathematics",
+        insti_id="20230004"
     ),
 }
 
