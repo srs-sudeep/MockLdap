@@ -4,43 +4,43 @@ from passlib.hash import bcrypt
 # Mock LDAP database
 mock_users = {
     # Professors
-    "john.doe": LDAPUser(
-        ldapid="john.doe",
+    "johndoe": LDAPUser(
+        ldapid="johndoe",
         password=bcrypt.hash("faculty123"),
         cn="John Doe",
         email="john.doe@university.edu",
-        role=UserRole.PROFESSOR,
+        role=UserRole.INSTRUCTOR,
         department="Computer Science",
         insti_id="20230001"
     ),
-    "jane.smith": LDAPUser(
-        ldapid="jane.smith",
+    "janesmith": LDAPUser(
+        ldapid="janesmith",
         password=bcrypt.hash("faculty456"),
         cn="Jane Smith",
         email="jane.smith@university.edu",
-        role=UserRole.PROFESSOR,
+        role=UserRole.INSTRUCTOR,
         department="Mathematics",
         insti_id="20230002"
     ),
     
     # Students
-    "alice.student": LDAPUser(
-        ldapid="alice.student",
+    "sudeepranjan": LDAPUser(
+        ldapid="sudeepranjan",
         password=bcrypt.hash("student123"),
         cn="Alice Johnson",
         email="alice.j@university.edu",
         role=UserRole.STUDENT,
         department="Computer Science",
-        insti_id="20230003"
+        insti_id="12141600"
     ),
-    "bob.student": LDAPUser(
-        ldapid="bob.student",
+    "lalaram": LDAPUser(
+        ldapid="lalaram",
         password=bcrypt.hash("student456"),
-        cn="Bob Wilson",
+        cn="Lala Ram",
         email="bob.w@university.edu",
         role=UserRole.STUDENT,
         department="Mathematics",
-        insti_id="20230004"
+        insti_id="12311370"
     ),
 }
 

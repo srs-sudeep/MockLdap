@@ -3,7 +3,7 @@ from enum import Enum
 from typing import Optional
 
 class UserRole(str, Enum):
-    PROFESSOR = "professor"
+    INSTRUCTOR = "instructor"
     STUDENT = "student"
 
 class LDAPUser(BaseModel):
