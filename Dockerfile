@@ -15,7 +15,7 @@ RUN poetry config virtualenvs.create false
 RUN poetry install
 
 # Copy application code
-COPY app app/
+COPY . .
 
 # Expose port
 EXPOSE 8001
