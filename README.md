@@ -39,6 +39,7 @@ A mock LDAP service for development and testing purposes. This service simulates
 
 ## Setup
 
+### Local Development
 1. Install Poetry if not already installed:
    ```bash
    curl -sSL https://install.python-poetry.org | python3 -
@@ -52,6 +53,31 @@ A mock LDAP service for development and testing purposes. This service simulates
 3. Run the service:
    ```bash
    poetry run uvicorn app.main:app --reload --port 8001
+   ```
+
+### Docker Deployment
+1. Install Docker and Docker Compose on Ubuntu:
+   ```bash
+   # Install Docker
+   sudo apt-get update
+   sudo apt-get install docker.io
+
+   # Install Docker Compose
+   sudo apt-get install docker-compose
+   ```
+
+2. Build and run the container:
+   ```bash
+   # Build and start the service
+   sudo docker-compose up -d
+
+   # View logs
+   sudo docker-compose logs -f
+   ```
+
+3. Stop the service:
+   ```bash
+   sudo docker-compose down
    ```
 
 ## API Endpoints
