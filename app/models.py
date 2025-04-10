@@ -5,13 +5,15 @@ from typing import Optional
 class UserRole(str, Enum):
     INSTRUCTOR = "instructor"
     STUDENT = "student"
+    ACADEMICS = "academics"
+    STUDENTAFFAIRS = "studentaffairs"
 
 class LDAPUser(BaseModel):
     ldapid: str
     password: str
     cn: str  # Common Name (Full Name)
     email: str
-    role: UserRole
+    role: Optional[UserRole] = None  # Making None the default value
     department: str
     insti_id: str = Field(..., min_length=8, max_length=8)  # 8 digit number
 

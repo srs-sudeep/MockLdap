@@ -40,7 +40,31 @@ mock_users = {
         email="lalaram@iitbhilai.ac.in",
         role=UserRole.STUDENT,
         department="Mathematics",
-        insti_id="12311370"
+        insti_id="12141601"
+    ),
+    "academics": LDAPUser(
+        ldapid="academics",
+        password=bcrypt.hash("academics1234"),
+        cn="Academics",
+        email="academics@iitbhilai.ac.in",
+        department="Academics",
+        insti_id="10000001"
+    ),
+    "sunil": LDAPUser(
+        ldapid="sunil",
+        password=bcrypt.hash("sunil"),
+        cn="Sunil Kumar",
+        email="sunil@iitbhilai.ac.in",
+        department="Academics",
+        insti_id="10000001"
+    ),
+    "studentaffairs": LDAPUser(
+        ldapid="studentaffairs",
+        password=bcrypt.hash("studentaffairs1234"),
+        cn="Student Affairs",
+        email="studentaffairs@iitbhilai.ac.in",
+        department="Student Affairs",
+        insti_id="10000002"
     ),
 }
 
