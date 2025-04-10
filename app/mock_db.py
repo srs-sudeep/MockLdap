@@ -22,6 +22,15 @@ mock_users = {
         department="Mathematics",
         insti_id="20230002"
     ),
+    "prof1": LDAPUser(
+        ldapid="prof1",
+        password=bcrypt.hash("faculty456"),
+        cn="Professor 1",
+        email="prof1@iitbhilai.ac.in",
+        role=UserRole.INSTRUCTOR,
+        department="Data Science",
+        insti_id="20230002"
+    ),
     
     # Students
     "sudeepranjan": LDAPUser(
@@ -31,7 +40,7 @@ mock_users = {
         email="sudeepranjan@iitbhilai.ac.in",
         role=UserRole.STUDENT,
         department="Computer Science",
-        insti_id="12141600"
+        insti_id="12141640"
     ),
     "lalaram": LDAPUser(
         ldapid="lalaram",
